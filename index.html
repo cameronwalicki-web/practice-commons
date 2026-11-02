@@ -33,7 +33,7 @@
          THE NAV is on each page twice, wide and phone: change one, change all. -->
     <a class="skip-link btn btn-primary" href="#main">Skip to content</a>
 
-    <nav class="navbar nav-over px-4 md:px-8" data-nav-over aria-label="Main">
+    <nav data-sticky-nav class="navbar bg-base-100/90 backdrop-blur sticky top-0 z-30 px-4 md:px-8 border-b border-base-content/10" aria-label="Main">
       <!-- THE NAV, centered: the name in the middle, the links split either side.
            It is on every page: change one, change all. -->
       <div class="navbar-start flex-1 w-auto gap-1">
@@ -41,9 +41,9 @@
           <summary class="btn btn-ghost text-inherit btn-square" aria-label="Site pages"><svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></summary>
           <ul class="menu dropdown-content bg-base-100 text-base-content border border-base-content/10 rounded-box z-40 mt-3 w-56 p-2 shadow-xl text-base">
             <li class="menu-title">Homes</li>
-            <li><a href="index.html" aria-current="page">Home 1</a></li>
+            <li><a href="index.html">Home 1</a></li>
             <li><a href="index-2.html">Home 2</a></li>
-            <li><a href="index-3.html">Home 3</a></li>
+            <li><a href="index-3.html" aria-current="page">Home 3</a></li>
             <li class="menu-title">Pages</li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="visit.html">Visit</a></li>
@@ -61,7 +61,7 @@
           <div class="dropdown-content bg-base-100 text-base-content border border-base-content/10 rounded-box z-40 mt-3 w-[38rem] p-3 shadow-xl">
             <ul class="grid grid-cols-3 gap-2">
               <li>
-                <a class="block rounded-box p-2 hover:bg-base-200 focus-visible:bg-base-200" href="index.html" aria-current="page">
+                <a class="block rounded-box p-2 hover:bg-base-200 focus-visible:bg-base-200" href="index.html">
                   <img class="aspect-video w-full rounded-field object-cover" src="img/dining-room.jpg" width="1920" height="1080" loading="lazy" alt="" />
                   <span class="mt-2 block font-semibold">Home 1</span>
                   <span class="block text-sm text-base-content/70">A film of the dining room behind the headline</span>
@@ -75,7 +75,7 @@
                 </a>
               </li>
               <li>
-                <a class="block rounded-box p-2 hover:bg-base-200 focus-visible:bg-base-200" href="index-3.html">
+                <a class="block rounded-box p-2 hover:bg-base-200 focus-visible:bg-base-200" href="index-3.html" aria-current="page">
                   <img class="aspect-video w-full rounded-field object-cover" src="img/dish-risotto.jpg" width="900" height="675" loading="lazy" alt="" />
                   <span class="mt-2 block font-semibold">Home 3</span>
                   <span class="block text-sm text-base-content/70">Tonight's specials on a chalkboard beside a plate</span>
@@ -99,38 +99,38 @@
     </nav>
 
     <!-- ============================================================ HERO
-         YouTube over the photo in styles.css (.hero-poster). data-video is the id
-         from a YouTube URL: swap it, then fix the footer credit. data-start and
-         data-end pick the looped clip, in seconds; 338 to 410 is sunlit. -->
-    <header data-nav-under class="hero-stage min-h-[80vh] md:min-h-[90vh] grid">
-      <div class="hero-poster" data-video="WhWc3b3KhnY" data-start="338" data-end="410" data-hero-video></div>
-      <div class="hero-scrim"></div>
-
-      <div class="relative z-10 self-center px-6 py-24 md:py-32 w-full">
-        <!-- .hero-rise: the words below rise in, one after another, as the page
-             opens. -->
-        <div class="hero-rise max-w-5xl mx-auto text-center text-white">
-          <p class="inline-flex items-center gap-2 rounded-full bg-black/50 px-4 py-1.5 text-sm font-semibold tracking-wide mb-8">
-            <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Open Wednesday to Sunday
-          </p>
-          <h1 class="font-display text-6xl md:text-8xl lg:text-9xl font-bold leading-[0.95] tracking-tight mb-8">
+         Tonight's chalkboard: the headline beside a plate, and three specials
+         on a card over its corner. Change the specials every week you like. -->
+    <header class="bg-base-200 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <p class="text-primary font-bold uppercase tracking-widest text-xs mb-4">Open Wednesday to Sunday · 5 to 10</p>
+          <h1 class="font-display text-5xl md:text-7xl font-bold leading-[0.98] tracking-tight mb-6">
             A headline that tastes like the food
           </h1>
-          <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">
-            One sentence. What kind of cooking, and who it is for. Not "an
-            unforgettable culinary journey" — say what is actually on the plate.
+          <p class="text-lg md:text-xl opacity-85 max-w-lg mb-8">
+            One sentence. What kind of cooking, and who it is for. Say what is
+            actually on the plate.
           </p>
-          <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <div class="flex flex-col sm:flex-row gap-3">
             <a class="btn btn-primary btn-lg" href="visit.html#book">Book a table</a>
-            <!-- One call to action. The menu is a second path, so it gets an
-                 outline, not a fill. -->
-            <a class="btn btn-lg btn-outline text-white border-white/70 hover:bg-white hover:text-black" href="menu.html">Read the menu</a>
+            <a class="btn btn-lg btn-ghost" href="menu.html">Read the menu</a>
           </div>
         </div>
-      </div>
 
-      <!-- The scroll cue: a nudge toward the rest of the page, on wide screens. -->
-      <a class="hero-cue hidden md:grid place-items-center size-11 rounded-full border border-white/60 hover:bg-white/10" href="#main" aria-label="Scroll down"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="relative pb-28 sm:pb-0">
+          <img class="w-full aspect-[4/3] object-cover rounded-[2.5rem] shadow-2xl" src="img/dish-risotto.jpg" width="900" height="675" fetchpriority="high" alt="Risotto in a shallow white bowl" />
+          <!-- The chalkboard. Three dishes, each with a price. -->
+          <section class="absolute -bottom-4 sm:-bottom-10 left-4 right-4 sm:left-auto sm:-right-4 sm:w-72 rotate-[-2deg] rounded-box bg-neutral text-neutral-content p-6 shadow-2xl" aria-labelledby="tonight-title">
+            <h2 id="tonight-title" class="font-display text-2xl font-bold mb-3">Tonight</h2>
+            <ul class="space-y-2">
+              <li class="flex justify-between gap-4"><span>A dish, and what is in it</span><span class="font-semibold">$00</span></li>
+              <li class="flex justify-between gap-4"><span>A second special</span><span class="font-semibold">$00</span></li>
+              <li class="flex justify-between gap-4"><span>Something sweet</span><span class="font-semibold">$0</span></li>
+            </ul>
+          </section>
+        </div>
+      </div>
     </header>
 
     <main id="main">
@@ -419,9 +419,8 @@
         <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row md:items-start md:justify-between gap-4 text-sm">
           <p class="opacity-80">© <span data-year>20XX</span> Your restaurant. Built with daisyUI and Tailwind CSS; icons by Lucide.</p>
           <details class="md:max-w-xl">
-            <summary class="cursor-pointer link link-hover opacity-80">Photo and video credits</summary>
+            <summary class="cursor-pointer link link-hover opacity-80">Photo credits</summary>
             <ul class="mt-3 space-y-1 opacity-80">
-              <li>Hero video: <a class="link" href="https://studio.blender.org/projects/spring/"><em>Spring</em></a> by Blender Studio, <a class="link" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Clipped to 5:38–6:50.</li>
               <li>Dining room: <a class="link" href="https://commons.wikimedia.org/wiki/File:Restaurant_in_Place_D%27Youville,_Quebec_City.jpg">Wilfredor</a>, Wikimedia Commons, <a class="link" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>. Cropped.</li>
               <li>Pasta: <a class="link" href="https://commons.wikimedia.org/wiki/File:Spaghetti_dish.jpg">jeuwre</a>, Wikimedia Commons, <a class="link" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Cropped.</li>
               <li>Salmon: <a class="link" href="https://commons.wikimedia.org/wiki/File:DSCF0412_Seared_salmon_fillet_topped_with_saut%C3%A9ed_shrimp_served_with_creamed_spinach_and_a_side_salad.jpg">PattayaPatrol</a>, Wikimedia Commons, <a class="link" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Cropped.</li>
@@ -440,6 +439,5 @@
     <a class="to-top" href="#top" data-to-top hidden aria-label="Back to top"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg></a>
 
     <script src="js/site.js"></script>
-    <script src="js/hero-video.js"></script>
   </body>
 </html>
