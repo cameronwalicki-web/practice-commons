@@ -1,9 +1,12 @@
 <!doctype html>
 <html lang="en" data-theme="coffee">
-  <head>
+  <head><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bistro — change this to your restaurant</title>
+    <title>Bistro — Commons</title>
     <meta name="description" content="One sentence about this restaurant. Search results show it; write it." />
 
     <!-- What a link preview shows in a chat. Once you publish, add
@@ -26,6 +29,7 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
     <meta name="theme-color" content="#231a22" />
     <link rel="stylesheet" href="styles.css" />
+     <link rel="stylesheet" href="Custom.css" />
   </head>
 
   <body class="bg-base-100 text-base-content">
@@ -119,7 +123,7 @@
         </div>
 
         <div class="relative pb-28 sm:pb-0">
-          <img class="w-full aspect-[4/3] object-cover rounded-[2.5rem] shadow-2xl" src="img/dish-risotto.jpg" width="900" height="675" fetchpriority="high" alt="Risotto in a shallow white bowl" />
+          <img class="w-full aspect-[4/3] object-cover rounded-[2.5rem] shadow-2xl" src="img/lorenzogallo-pizza-8404974.jpg" width="900" height="675" fetchpriority="high" alt="Risotto in a shallow white bowl" />
           <!-- The chalkboard. Three dishes, each with a price. -->
           <section class="absolute -bottom-4 sm:-bottom-10 left-4 right-4 sm:left-auto sm:-right-4 sm:w-72 rotate-[-2deg] rounded-box bg-neutral text-neutral-content p-6 shadow-2xl" aria-labelledby="tonight-title">
             <h2 id="tonight-title" class="font-display text-2xl font-bold mb-3">Tonight</h2>
@@ -441,3 +445,50 @@
     <script src="js/site.js"></script>
   </body>
 </html>
+
+/***Mouse***/
+<script>
+  document.addEventListener('mousemove', function(e) {
+    // Only create trail elements occasionally to prevent lag
+    if (Math.random() < 0.3) {
+      const particle = document.createElement('div');
+      particle.className = 'pizza-trail';
+
+      // Randomly pick yellow (cheese) or red (sauce/pepperoni) for crumbs
+      const colors = ['#fef08a', '#b91c1c', '#f97316'];
+      particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+      particle.style.left = e.clientX + 'px';
+      particle.style.top = e.clientY + 'px';
+
+      document.body.appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 600);
+    }
+  });
+</script>
+
+<style>
+  .pizza-trail {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    animation: fadeAndDrop 0.6s linear forwards;
+  }
+
+  @keyframes fadeAndDrop {
+    0% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, 10px) scale(0.2);
+    }
+  }
+</style>
