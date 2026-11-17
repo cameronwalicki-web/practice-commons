@@ -101,3 +101,44 @@ body {
 a, button, input[type="submit"] {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 32 32"><path d="M4 4 C12 2, 20 2, 28 4 C27 8, 25 10, 24 13 L16 29 L8 13 C7 10, 5 8, 4 4 Z" fill="%23f97316"/><path d="M5 5 C12 3, 20 3, 27 5 C26 7, 25 8, 24 10 C18 9, 14 9, 8 10 C7 8, 6 7, 5 5 Z" fill="%239a3412"/><path d="M8 10 C14 9, 18 9, 24 10 L16 27 Z" fill="%23fde047"/><circle cx="16" cy="14" r="2.5" fill="%23991b1b"/><circle cx="12" cy="19" r="2.2" fill="%23991b1b"/><circle cx="19" cy="18" r="2.2" fill="%23991b1b"/><circle cx="15" cy="23" r="1.8" fill="%23991b1b"/></svg>') 2 2, pointer;
 }
+
+/* --- Bistro Theme (Only applies to elements.html) --- */
+
+.elements-page {
+  background-color: #012A4A;
+  color: #A9D6E5;
+  font-family: 'Lato', sans-serif;
+}
+
+.elements-page h1,
+.elements-page h2,
+.elements-page h3,
+.elements-page h4,
+.elements-page h5,
+.elements-page h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #FFFFFF;
+}
+
+.elements-page a {
+  color: #89C2D9;
+}
+
+.elements-page a:hover {
+  color: #A9D6E5;
+}
+
+.elements-page button,
+.elements-page input[type="submit"] {
+  background-color: #2C7DA0;
+  color: #FFFFFF;
+  font-family: 'Lato', sans-serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.elements-page button:hover {
+  background-color: #468FAF;
+}
